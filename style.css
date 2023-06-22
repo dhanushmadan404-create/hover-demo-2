@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Roboto:wght@100;300;400&display=swap');
+
+:root {
+    --primary-ff: 'Roboto', sans-serif;
+}
+
+* {
+    font-family: var(--primary-ff);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 250px;
+}
+
+.card-thumbnail {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.35s ease-in-out;
+}
+
+.card-thumbnail>img {
+    width: 100%;
+    height: 100%;
+}
+p{
+    color: red;
+}
+.card-body {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+    background-color: aliceblue;
+    padding: 10px;
+    box-shadow: 0 0 20px lightgrey;
+    transition: all 0.3s ease-in;
+}
+
+.card-body:hover {
+    transform: scale(1.02);
+    background-color: #132850;
+    color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 0 20px lightgrey;
+}
+
+.card:hover .card-thumbnail {
+    visibility: visible;
+    transform: scale(1.05);
+    opacity: 1;
+}
+.card:hover p {
+    color: #fff;
+}
